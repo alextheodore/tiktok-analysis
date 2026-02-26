@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-foreground: var(--foreground-rgb);
+  --color-background-start: var(--background-start-rgb);
+  --color-background-end: var(--background-end-rgb);
+}
+
+:root {
+  --foreground-rgb: 0 0 0;
+  --background-start-rgb: 214 219 220;
+  --background-end-rgb: 255 255 255;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen selection:bg-purple-200;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-lg border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl;
+  }
+}
