@@ -12,8 +12,13 @@ import { setupWorker } from './modules/analysis/analysis.worker';
 
 const app = express();
 
-app.use(cors());
-app.use(helmet());
+app.use(cors({
+  origin: 'https://tiktok-analysiss.vercel.app/', 
+  credentials: true
+}));
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" }
+}));
 app.use(express.json());
 
 // Run migration
