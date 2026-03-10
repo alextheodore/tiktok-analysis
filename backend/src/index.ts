@@ -13,7 +13,7 @@ import { setupWorker } from './modules/analysis/analysis.worker';
 const app = express();
 
 app.use(cors({
-  origin: 'https://tiktok-analysiss.vercel.app', 
+  origin: ['https://tiktok-analysiss.vercel.app', 'http://localhost:3000'],
   credentials: true
 }));
 app.use(helmet({

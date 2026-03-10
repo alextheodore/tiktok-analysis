@@ -18,9 +18,9 @@ interface AuthState {
 export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
-      token: null,
-      user: null,
-      isAuthenticated: false,
+      token: 'guest-token',
+      user: { id: 1, email: 'guest@example.com', role: 'user' },
+      isAuthenticated: true,
       login: (token, user) => set({ token, user, isAuthenticated: true }),
       logout: () => set({ token: null, user: null, isAuthenticated: false }),
     }),

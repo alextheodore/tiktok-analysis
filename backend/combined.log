@@ -123,3 +123,33 @@
 {"level":"info","message":"Server running on port 5000","timestamp":"2026-02-19T06:26:48.129Z"}
 {"level":"info","message":"Database schema initialized.","timestamp":"2026-02-19T06:26:48.237Z"}
 {"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-02-19T06:26:48.263Z"}
+{"level":"info","message":"🔌 Attempting DB Connection to: postgres://postgres:****@127.0.0.1:5433/tiktok_analyzer","timestamp":"2026-03-02T09:41:26.357Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-03-02T09:41:28.021Z"}
+{"level":"info","message":"Database schema initialized.","timestamp":"2026-03-02T09:41:28.184Z"}
+{"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-03-02T09:41:28.228Z"}
+{"level":"info","message":"🔌 Attempting DB Connection to: postgres://postgres:****@127.0.0.1:5433/tiktok_analyzer","timestamp":"2026-03-02T09:55:43.352Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-03-02T09:55:44.715Z"}
+{"level":"info","message":"Database schema initialized.","timestamp":"2026-03-02T09:55:44.826Z"}
+{"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-03-02T09:55:44.855Z"}
+{"level":"info","message":"🔌 Attempting DB Connection to: postgres://postgres:****@127.0.0.1:5433/tiktok_analyzer","timestamp":"2026-03-02T09:56:48.992Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-03-02T09:56:50.394Z"}
+{"level":"info","message":"Database schema initialized.","timestamp":"2026-03-02T09:56:50.486Z"}
+{"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-03-02T09:56:50.508Z"}
+{"level":"info","message":"🔌 Attempting DB Connection to: postgres://postgres:****@127.0.0.1:5433/tiktok_analyzer","timestamp":"2026-03-10T06:15:57.519Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-03-10T06:16:00.737Z"}
+{"level":"info","message":"Database schema initialized.","timestamp":"2026-03-10T06:16:00.962Z"}
+{"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-03-10T06:16:01.052Z"}
+{"level":"info","message":"🔌 Attempting DB Connection to: postgres://postgres:****@127.0.0.1:5433/tiktok_analyzer","timestamp":"2026-03-10T06:36:09.180Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-03-10T06:36:10.627Z"}
+{"level":"info","message":"Database schema initialized.","timestamp":"2026-03-10T06:36:10.719Z"}
+{"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-03-10T06:36:10.737Z"}
+{"level":"info","message":"🔌 Attempting DB Connection to: postgres://postgres:****@127.0.0.1:5433/tiktok_analyzer","timestamp":"2026-03-10T06:36:49.130Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-03-10T06:36:50.311Z"}
+{"level":"info","message":"Database schema initialized.","timestamp":"2026-03-10T06:36:50.388Z"}
+{"level":"info","message":"ℹ️ Admin user already exists. Skipping seed.","timestamp":"2026-03-10T06:36:50.404Z"}
+{"level":"info","message":"Processing job 10","timestamp":"2026-03-10T06:44:16.655Z"}
+{"level":"info","message":"Job 10 completed for @dennysantoso.brainboost","timestamp":"2026-03-10T06:44:17.048Z"}
+{"level":"info","message":"10 has completed!","timestamp":"2026-03-10T06:44:17.057Z"}
+{"level":"info","message":"Processing job 11","timestamp":"2026-03-10T06:44:37.436Z"}
+{"level":"info","message":"Job 11 completed for @insta_creator","timestamp":"2026-03-10T06:44:37.493Z"}
+{"level":"info","message":"11 has completed!","timestamp":"2026-03-10T06:44:37.496Z"}

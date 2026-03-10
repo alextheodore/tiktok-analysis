@@ -14,8 +14,8 @@ export default function Home() {
           <Sparkles className="mr-2 text-purple-600" /> AI-Powered TikTok Insights
         </p>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <Link href="/auth/login" className="pointer-events-auto flex place-items-center gap-2 p-8 lg:p-0 font-bold text-indigo-600 hover:text-indigo-800 transition-colors">
-            Login <Zap className="w-4 h-4" />
+          <Link href="/dashboard" className="pointer-events-auto flex place-items-center gap-2 p-8 lg:p-0 font-bold text-indigo-600 hover:text-indigo-800 transition-colors">
+            Dashboard <Zap className="w-4 h-4" />
           </Link>
         </div>
       </div>
@@ -56,8 +56,8 @@ export default function Home() {
       </div>
       
       <div className="z-10">
-        <Link href="/auth/register" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          Get Started for Free
+        <Link href="/dashboard" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          Open Dashboard
         </Link>
       </div>
     </main>

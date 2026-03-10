@@ -16,24 +16,41 @@ export const setupWorker = () => {
         const { userId, videoUrl } = job.data;
         
         try {
-            // 1. Fetch Real Metadata via OEmbed
-            const oembedUrl = `https://www.tiktok.com/oembed?url=${videoUrl}`;
-            const { data } = await axios.get<any>(oembedUrl);
+            let title = '';
+            let username = '';
+            let hashtags: string[] = [];
+            let videoId = `v${Date.now()}`;
 
-            // 2. Parse Real Data
-            const title = data.title || '';
-            const authorName = data.author_name || 'TikTok User';
-            const authorUrl = data.author_url || '';
-            // Extract username from URL (e.g. tiktok.com/@username)
-            const usernameMatch = authorUrl.match(/@([^/?]+)/);
-            const username = usernameMatch ? `@${usernameMatch[1]}` : `@${authorName.replace(/\s+/g, '').toLowerCase()}`;
+            if (videoUrl.includes('tiktok.com')) {
+                // 1. Fetch Real Metadata via OEmbed for TikTok
+                const oembedUrl = `https://www.tiktok.com/oembed?url=${videoUrl}`;
+                const { data } = await axios.get<any>(oembedUrl);
 
-            // Extract Hashtags from title
-            const hashtags = title.match(/#\w+/g) || [];
-
-            // Extract Video ID from input URL (more reliable than oembed sometimes)
-            const videoIdMatch = videoUrl.match(/\/video\/(\d+)/);
-            const videoId = videoIdMatch ? videoIdMatch[1] : `v${Date.now()}`;
+                title = data.title || '';
+                const authorName = data.author_name || 'TikTok User';
+                const authorUrl = data.author_url || '';
+                const usernameMatch = authorUrl.match(/@([^/?]+)/);
+                username = usernameMatch ? `@${usernameMatch[1]}` : `@${authorName.replace(/\s+/g, '').toLowerCase()}`;
+                hashtags = title.match(/#\w+/g) || [];
+                const videoIdMatch = videoUrl.match(/\/video\/(\d+)/);
+                if (videoIdMatch) videoId = videoIdMatch[1];
+            } else if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
+                // Mock parsing for Youtube
+                title = 'YouTube Video (Mock Data)';
+                username = '@youtube_creator';
+                const ytMatch = videoUrl.match(/(?:v=|youtu\.be\/|\/v\/|\/embed\/|\/shorts\/)([^&?]+)/);
+                if (ytMatch) videoId = `yt_${ytMatch[1]}`;
+            } else if (videoUrl.includes('instagram.com')) {
+                // Mock parsing for Instagram
+                title = 'Instagram Post/Reel (Mock Data)';
+                username = '@insta_creator';
+                const igMatch = videoUrl.match(/\/(?:p|reel)\/([^/?#]+)/);
+                if (igMatch) videoId = `ig_${igMatch[1]}`;
+            } else {
+                title = 'Unknown Link';
+                username = '@unknown';
+                videoId = videoUrl.split('/').pop()?.split('?')[0] || `unk_${Date.now()}`;
+            }
 
             // 3. Generate Realistic Valid Stats (Deterministic based on Video ID)
             // Use the last 5 digits of ID to seed random stats

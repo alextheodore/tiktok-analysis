@@ -10,10 +10,18 @@ export const authenticateToken = (req: AuthRequest, res: Response, next: NextFun
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 
-    if (!token) return res.sendStatus(401);
+    if (!token) {
+        // Allow access without token as requested, using a default guest user
+        req.user = { id: 1, email: 'guest@example.com', role: 'user' };
+        return next();
+    }
 
     jwt.verify(token, JWT_SECRET, (err: any, user: any) => {
-        if (err) return res.sendStatus(403);
+        if (err) {
+            // Even if token is invalid, fallback to guest user
+            req.user = { id: 1, email: 'guest@example.com', role: 'user' };
+            return next();
+        }
         req.user = user;
         next();
     });

@@ -92,7 +92,7 @@ export default function Dashboard() {
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
             TikTok Insight Analyzer
         </h1>
-        <p className="text-slate-500">Paste a TikTok URL or enter a #Hashtag to analyze.</p>
+        <p className="text-slate-500">Paste a TikTok, YouTube, or Instagram URL or enter a #Hashtag to analyze.</p>
       </div>
 
       {/* Input Section */}
@@ -102,7 +102,7 @@ export default function Dashboard() {
                 <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5 pointer-events-none" />
                 <input 
                     type="text" 
-                    placeholder="Paste Video URL or Type #Hashtag..." 
+                    placeholder="Paste TikTok, YouTube, Instagram URL or #Hashtag..." 
                     className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/60 border border-slate-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 outline-none transition-all placeholder:text-slate-400 text-slate-800 text-lg shadow-inner"
                     value={videoUrl}
                     onChange={e => setVideoUrl(e.target.value)}
